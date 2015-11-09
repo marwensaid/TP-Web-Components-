@@ -1,7 +1,0 @@
-input:invalid, textarea:invalid {
-    background-color:pink;
-}
-
-input:valid, textarea:valid {
-    background-color:lightgreen;
-}
