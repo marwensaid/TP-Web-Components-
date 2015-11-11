@@ -1,22 +1,65 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8">
-    <title>JS Bin</title>
+    <meta charset="utf-8" />
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="assets/js/validation.js" ></script>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/moncss.css" />
+    <title>Mon formulaire</title>
 </head>
 <body>
-<form onsubmit="return soumettre();">
-    <fieldset>
-        <legend>Nouveau message</legend>
-        <label id="labelTitre"  for="titre">Titre : </label>
-        <input id="titre" name="titre" type="text" required><p>
-        <label for="contenu">Contenu : </label><br>
-        <textarea rows=10  id="titre" name="titre" type="text" required></textarea><p>
-        Ajouter des images: <input id="fileSelector" type="file" onchange="traiteFichiers();" multiple>
-        <p>
-            <button onclick="geolocalise();">Géolocalise moi</button>
-            <button   value="Envoyer">Envoyer</input>
-    </fieldset>
-</form>
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="page-header">
+                <h1 class="center-block">Formulaire</h1>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-6 col-xs-offset-3">
+            <form class="form-horizontal" onsubmit="return validation()">
+                <div class="form-group">
+                    <label class="control-label" for="nom">Nom : </label> <span id="nom_error" class="hidden"></span>
+                    <input type="text" class="form-control" id="nom" placeholder="Votre nom" />
+                </div>
+                <div class="form-group">
+                    <label for="prenom">Prénom : </label> <span id="prenom_error" class="hidden"></span>
+                    <input type="text" class="form-control" id="prenom" placeholder="Votre prenom" />
+                </div>
+                <div class="form-group">
+                    <label for="datenaiss">Date de naissance : </label> <span id="datenaiss_error" class="hidden"></span>
+                    <input type="date" class="form-control" id="datenaiss" placeholder="Votre date de naissance" />
+                </div>
+                <div class="form-group">
+                    <label for="nom">Email : </label> </label> <span id="email_error" class="hidden"></span>
+                    <input type="email" class="form-control" id="Email" placeholder="Votre email" />
+                </div>
+                <div class="form-group">
+                    <label for="adresse">Adresse : </label> <span id="adresse_error" class="hidden"></span>
+                    <input type="text" class="form-control" id="adresse" placeholder="Votre adresse" />
+                </div>
+                <div class="form-group">
+                    <label for="cp">Code postal : </label>  <span id="cp_error" class="hidden"></span>
+                    <input type="text" class="form-control" id="cp" placeholder="Votre code postale" />
+                </div>
+                <div class="form-group">
+                    <label for="login">Login : </label>  <span id="login_error" class="hidden"></span>
+                    <input type="text" class="form-control" id="login" placeholder="Votre nom" />
+                </div>
+                <div class="form-group">
+                    <label for="mdp">Password : </label>
+                    <input type="password" class="form-control" id="mdp" placeholder="Votre mot de passe" />
+                </div>
+                <div class="form-group">
+
+                    <input type="submit" value="OK !" class="btn btn-primary" />
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
 </body>
 </html>
