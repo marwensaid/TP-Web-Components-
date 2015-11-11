@@ -1,0 +1,15 @@
+.input-wrong
+{
+    border-color: red!important;
+}
+
+.input-correct{
+    border-color: #ccc;
+}
+
+.input-error-message
+{
+    color :red!important;
+    visibility: visible;
+}
+
