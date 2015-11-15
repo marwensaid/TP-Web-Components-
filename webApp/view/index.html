@@ -55,18 +55,24 @@
                 </div>
 
                 <div class="form-group">
-                    <button onchange="traiteFichiers();" class="btn btn-primary"><span class="glyphicon glyphicon-paperclip"
-                                                                     aria-hidden="true"></span> Ajouter fichier
-                    </button>
+                    <input id="fileselector" type="file" onchange="traiteFichiers();" class="btn btn-primary"><span
+                        class="glyphicon glyphicon-paperclip"
+                        aria-hidden="true"></span> Ajouter fichier
+                    </input>
                 </div>
 
                 <div class="form-group">
 
-                    <button onclick="" class="btn btn-primary"><span class="glyphicon glyphicon-send"
-                                                                     aria-hidden="true"></span> Envoyer
+
+                    <button onclick="" class="btn btn-primary"
+                            formaction="https://github.com/marwensaid/TP-Web-Components-"><span
+                            class="glyphicon glyphicon-send"
+                            aria-hidden="true"></span> Envoyer
                     </button>
-                    <button onclick="geolocalise();" class="btn btn-primary"><span class="glyphicon glyphicon-globe"
-                                                                                   aria-hidden="true"></span>
+                    <button onclick="geolocalise();" class="btn btn-primary"
+                            formaction="https://www.google.fr/maps/@43.6242118,7.050793,16z"><span
+                            class="glyphicon glyphicon-globe"
+                            aria-hidden="true"></span>
                         Géolocalise moi
                     </button>
                 </div>

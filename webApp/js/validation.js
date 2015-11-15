@@ -82,7 +82,7 @@ function validation() {
         retour = inputVide(input_cp, cp_error);
     }
 
-    if (input_adresse.value != "") {
+ /*   if (input_adresse.value != "") {
         if (!pattRegexAdresse.test(input_adresse.value)) {
             adresse_error = window.document.getElementById("adresse_error");
             retour = inputWrong(input_adresse, adresse_error, "Adresse invalide");
@@ -93,7 +93,7 @@ function validation() {
     }
     else {
         retour = inputVide(input_adresse, adresse_error);
-    }
+    } */
 
     if (input_login.value != "") {
         if (!pattRegexLogin.test(input_login.value)) {
@@ -140,3 +140,9 @@ function traiteFichiers(evt) {
     console.log("fichiers selectionnés : " + files.length);
 
 }
+
+function showLocation(position) {
+    alert('Latitude : ' + position.coords.latitude + ' - Longitude : ' + position.coords.latitude);
+}
+
+
