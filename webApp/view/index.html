@@ -4,6 +4,10 @@
     <meta charset="utf-8"/>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="../js/validation.js"></script>
+    <script src='http://codepen.io/assets/libs/fullpage/jquery.js'></script>
+    <script src="../js/captcha.js"></script>
+    <script src="../js/uploadFile.js"></script>
+    <script>placenumber();</script>
     <link rel="stylesheet" href="../style/bootstrap.min.css"/>
     <link rel="stylesheet" href="../style/moncss.css"/>
     <title>Mon formulaire</title>
@@ -55,31 +59,61 @@
                 </div>
 
                 <div class="form-group">
-                    <input id="fileselector" type="file" onchange="traiteFichiers();" class="btn btn-primary"><span
-                        class="glyphicon glyphicon-paperclip"
-                        aria-hidden="true"></span> Ajouter fichier
-                    </input>
+                    <!--   <input id="fileselector" type="file" onchange="traiteFichiers();" class="btn btn-primary"><span
+                           class="glyphicon glyphicon-paperclip"
+                           aria-hidden="true"></span> Ajouter fichier
+                       </input> -->
+
+                    <div id="upl">
+                        <label for="fileselect">Ajouter des images : </label>
+                        <input type="file" id="fileselect" name="fileselect[]" multiple="multiple"/>
+
+                        <div id="filedrag"><img id="upload-icon" src="../img/Upload-Folder-Blue-icon.png"
+                                                alt="ou glisser ici"/></div>
+                    </div>
+
+                    <!--<div id="submitbutton">
+                        <button type="submit">Upload Files</button>
+                    </div>-->
+
+                    <center>
+                        <div id="progress"></div>
+
+                        <div id="messages">
+                            <p></p>
+                        </div>
+                    </center>
                 </div>
 
                 <div class="form-group">
 
+                    <span>combien font <span id="no1"></span> + <span id="no2"></span>?</span>
+                    <input name="answer" id="answer" pattern="7"
+                           title="Prouvez que vous n'étes pas un putain de robot" placeholder="your answer" required>
+                    <button onclick="hasHtml5Validation()" class="btn btn-primary"><span
+                            class="glyphicon glyphicon-eye-open"
+                            aria-hidden="true"></span> Verifier
+                    </button>
+                </div>
 
-                    <button onclick="" class="btn btn-primary"
+                <div class="form-group">
+                    <button onclick="validation()" class="btn btn-primary"
                             formaction="https://github.com/marwensaid/TP-Web-Components-"><span
                             class="glyphicon glyphicon-send"
                             aria-hidden="true"></span> Envoyer
                     </button>
-                    <button onclick="geolocalise();" class="btn btn-primary"
-                            formaction="https://www.google.fr/maps/@43.6242118,7.050793,16z"><span
+
+                    <button onclick="showLocation()" class="btn btn-primary"
+                            formaction="https://www.google.fr/maps"><span
                             class="glyphicon glyphicon-globe"
                             aria-hidden="true"></span>
                         Géolocalise moi
                     </button>
                 </div>
             </form>
+
         </div>
     </div>
 </div>
-
 </body>
 </html>

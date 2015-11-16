@@ -82,18 +82,18 @@ function validation() {
         retour = inputVide(input_cp, cp_error);
     }
 
- /*   if (input_adresse.value != "") {
-        if (!pattRegexAdresse.test(input_adresse.value)) {
-            adresse_error = window.document.getElementById("adresse_error");
-            retour = inputWrong(input_adresse, adresse_error, "Adresse invalide");
-        }
-        else {
-            removeErrorMessage(input_adresse, adresse_error);
-        }
-    }
-    else {
-        retour = inputVide(input_adresse, adresse_error);
-    } */
+    /*   if (input_adresse.value != "") {
+     if (!pattRegexAdresse.test(input_adresse.value)) {
+     adresse_error = window.document.getElementById("adresse_error");
+     retour = inputWrong(input_adresse, adresse_error, "Adresse invalide");
+     }
+     else {
+     removeErrorMessage(input_adresse, adresse_error);
+     }
+     }
+     else {
+     retour = inputVide(input_adresse, adresse_error);
+     } */
 
     if (input_login.value != "") {
         if (!pattRegexLogin.test(input_login.value)) {
@@ -133,7 +133,9 @@ function geolocalise() {
 
     navigator.geolocation.getCurrentPosition(displayPosition);
 }
-
+function displayPosition(position) {
+    console.log("long = " + position.coords.longitude);
+}
 function traiteFichiers(evt) {
     var files = event.target.files;
 
